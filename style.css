@@ -1,0 +1,447 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    color: #333;
+    background-color: #fefefe;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #2d5a4a; /* Изумрудный */
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Главная страница с письмом */
+.landing-page {
+    background: linear-gradient(135deg, #f9f3e9 0%, #e8f4ea 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+}
+
+.envelope {
+    width: 300px;
+    height: 250px;
+    background: #fff9e6;
+    border: 2px solid #e6d4b1;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+.letter .address {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.letter .names {
+    font-family: 'Marck Script', cursive;
+    font-size: 2.8rem;
+    color: #b86d6d;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.letter .date {
+    font-size: 1.8rem;
+    color: #2d5a4a;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.letter .instruction {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Страница приглашения */
+.invitation-page {
+    background-color: #fff;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Секция с молодоженами */
+.main-photo-section {
+    text-align: center;
+}
+
+.couple-photo img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(45, 90, 74, 0.2);
+    margin-bottom: 40px;
+}
+
+.invitation-text h1 {
+    font-family: 'Marck Script', cursive;
+    font-size: 4rem;
+    color: #b86d6d;
+    margin-bottom: 10px;
+}
+
+.date-large {
+    font-size: 2.2rem;
+    color: #2d5a4a;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.quote {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Детские фото */
+.childhood-section {
+    background-color: #f9f7f2;
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.floating-photos {
+    position: relative;
+    height: 400px;
+}
+
+.floating {
+    position: absolute;
+    width: 180px;
+    height: 220px;
+    border-radius: 10px;
+object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border: 8px solid white;
+    z-index: 2;
+}
+
+.floating.left {
+    left: 10%;
+    top: 20%;
+    animation: floatLeft 6s ease-in-out infinite;
+}
+
+.floating.right {
+    right: 10%;
+    top: 50%;
+    animation: floatRight 7s ease-in-out infinite 1s;
+}
+
+@keyframes floatLeft {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-20px) rotate(0deg); }
+}
+
+@keyframes floatRight {
+    0%, 100% { transform: translateY(0) rotate(5deg); }
+    50% { transform: translateY(-25px) rotate(0deg); }
+}
+
+.fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/fireworks.png'); /* Нужна картинка с салютом */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+/* Секция пожеланий (изумрудный фон) */
+.wishes-section {
+    background-color: #2d5a4a;
+    color: #fff;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.wishes-container {
+    padding: 40px;
+}
+
+.wishes-section h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.wishes-list {
+    list-style: none;
+    margin: 30px 0;
+    padding-left: 0;
+}
+
+.wishes-list li {
+    padding: 15px 0;
+    font-size: 1.2rem;
+    border-bottom: 1px dashed rgba(255,255,255,0.3);
+}
+
+.wishes-list li i {
+    margin-right: 15px;
+    color: #ffd166;
+}
+
+.note {
+    font-style: italic;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+/* Тайминг */
+.timeline-section {
+    background-color: #fff;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+/* СТАЛО (линия сдвинута правее): */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 150px; /* ← Увеличили с 50px до 150px */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 120px; /* ← Увеличили с 55px до 120px */
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(to bottom, #b86d6d, #2d5a4a);
+    border-radius: 5px;
+    /* transform: translateX(-50%); ← ЭТУ СТРОКУ УДАЛИТЬ */
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.time {
+    flex: 0 0 100px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #b86d6d;
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 5px;
+}
+
+.event {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #2d5a4a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.event h3 {
+    color: #2d5a4a;
+    margin-bottom: 10px;
+}
+
+.event p {
+    margin-bottom: 5px;
+}
+
+.event i {
+    color: #b86d6d;
+    margin-right: 8px;
+}
+
+/* Форма RSVP */
+.rsvp-section {
+    background-color: #f9f7f2;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 50px;
+}
+
+.rsvp-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.rsvp-form .form-group {
+    margin-bottom: 25px;
+}
+
+.rsvp-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2d5a4a;
+}
+
+.rsvp-form input[type="text"],
+.rsvp-form input[type="email"],
+.rsvp-form input[type="tel"],
+.rsvp-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    transition: border 0.3s;
+}
+
+.rsvp-form input:focus,
+.rsvp-form textarea:focus {
+    border-color: #2d5a4a;
+    outline: none;
+}
+
+.radio-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-label input {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    background-color: #b86d6d;
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+}
+
+.submit-btn:hover {
+    background-color: #a55a5a;
+}
+
+.form-note {text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Telegram секция */
+.telegram-invite {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px dashed #ccc;
+}
+
+.tg-btn {
+    display: inline-block;
+    background-color: #0088cc;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.tg-btn:hover {
+    background-color: #006699;
+}
+
+.tg-btn i {
+    margin-right: 10px;
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #2d5a4a;
+    color: white;
+}
+
+.footer a {
+    color: #ffd166;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .letter .names { font-size: 2.2rem; }
+    .invitation-text h1 { font-size: 3rem; }
+    .date-large { font-size: 1.8rem; }
+    .quote { font-size: 1.2rem; }
+    .timeline::before { left: 30px; }
+    .time { flex: 0 0 80px; font-size: 1.5rem; }
+    .rsvp-section { padding: 30px 20px; }
+    .floating { width: 130px; height: 160px; }
+}
